@@ -1,3 +1,5 @@
+require 'zip'
+
 require_relative 'rapinoe/keynote'
 
 module Rapinoe

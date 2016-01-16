@@ -8,4 +8,5 @@ Gem::Specification.new do |s|
   s.email       = 'zach@zachholman.com'
   s.files       = ["lib/rapinoe.rb"]
   s.homepage    = 'https://github.com/holman/rapinoe'
+  s.add_runtime_dependency 'rubyzip', '~> 1.1.7'
 end

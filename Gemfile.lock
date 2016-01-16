@@ -1,0 +1,19 @@
+PATH
+  remote: .
+  specs:
+    rapinoe (0.0.1)
+      rubyzip (~> 1.1.7)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    rubyzip (1.1.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rapinoe!
+
+BUNDLED WITH
+   1.11.2

@@ -14,4 +14,8 @@ class TestKeynote < Test::Unit::TestCase
   def test_size
     assert_equal 327378, @keynote.size
   end
+
+  def test_data
+    assert_not_nil @keynote.data
+  end
 end
