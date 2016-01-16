@@ -4,7 +4,7 @@
 
 Rapinoe helps you parse Apple Keynote files.
 
-Primarily it's designed to help you access the metadata of a Keynote file: return how many slides there are, extract the slide previews baked into the file, tell you various details about the file itself on disk, and so on.
+Primarily it's designed to help you access the simple metadata of a Keynote file: return how many slides there are, extract the slide previews baked into the file, tell you various details about the file itself on disk, and so on.
 
 ## Install
 
