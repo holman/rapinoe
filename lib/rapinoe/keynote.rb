@@ -18,6 +18,27 @@ module Rapinoe
       File.size(path)
     end
 
+    # The binary data associated with the .jpg Keynote writes to make a
+    # high(ish) quality preview version of the deck. You likely will want to
+    # access this via #write_preview_to_file, unless you have specific needs for
+    # the binary data.
+    #
+    # Returns the contents of preview.jpg.
+    def preview_data
+      @data.find_entry("preview.jpg").get_input_stream.read
+    end
+
+    # Writes Keynote's preview.jpg to disk somewhere.
+    #
+    #   path - The path to the new file you want to write.
+    #
+    # Returns nothing.
+    def write_preview_to_file(path)
+      File.open(path, 'wb') do |out|
+        out.write(preview_data)
+      end
+    end
+
   private
 
     # .key files basically just try to masquerade as .zip files. Once we extract

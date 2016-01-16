@@ -18,4 +18,20 @@ class TestKeynote < Test::Unit::TestCase
   def test_data
     assert_not_nil @keynote.data
   end
+
+  def test_preview_data
+    assert_equal 32858, @keynote.preview_data.size
+  end
+
+  def test_write_preview_to_file
+    tempfile = "/tmp/rapinoe-test.jpg"
+
+    refute File.exist?(tempfile)
+    @keynote.write_preview_to_file(tempfile)
+
+    assert File.exist?(tempfile)
+    assert_operator File.size(tempfile), :>, 32858
+  ensure
+    File.delete tempfile
+  end
 end
