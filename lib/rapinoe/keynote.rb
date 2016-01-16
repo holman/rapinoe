@@ -26,7 +26,7 @@ module Rapinoe
     end
 
     def slides
-      @data.glob("Data/st-*").map do |preview_jpg_data|
+      @data.glob("Data/st*").map do |preview_jpg_data|
         Slide.new(preview_jpg_data.get_input_stream.read)
       end
     end
