@@ -26,4 +26,7 @@ rapinoe.slides
 
 rapinoe.slides.first.write_preview_to_file("/tmp/slide-preview.jpg")
 # => writes the Keynote-generated slide preview to a file
+
+rapinoe.widescreen?
+# => true
 ```

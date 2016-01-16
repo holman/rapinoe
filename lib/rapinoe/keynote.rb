@@ -25,6 +25,28 @@ module Rapinoe
       File.size(path)
     end
 
+    # The aspect ratio of the deck.
+    #
+    # Returns a Symbol, either :widescreen or :standard (4:3).
+    def aspect_ratio
+      path = "/tmp/rapinoe-aspect"
+      write_preview_to_file(path)
+
+      dimensions = FastImage.size(path)
+      widescreen = (16/9.0)
+
+      if widescreen == (dimensions[0] / dimensions[1].to_f)
+        :widescreen
+      else
+        :standard
+      end
+    end
+
+    # Is it widescreen? Does it blend?
+    def widescreen?
+      aspect_ratio == :widescreen
+    end
+
     def slides
       @data.glob("Data/st*").map do |preview_jpg_data|
         Slide.new(preview_jpg_data.get_input_stream.read)

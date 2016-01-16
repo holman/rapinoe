@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.files       = ["lib/rapinoe.rb"]
   s.homepage    = 'https://github.com/holman/rapinoe'
   s.require_paths = %w[lib]
+  s.add_runtime_dependency 'fastimage', '~> 1.8.1'
   s.add_runtime_dependency 'rubyzip', '~> 1.1', '>= 1.1.7'
 
   # = MANIFEST =

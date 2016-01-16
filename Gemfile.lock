@@ -1,12 +1,16 @@
 PATH
   remote: .
   specs:
-    rapinoe (0.0.1)
-      rubyzip (~> 1.1.7)
+    rapinoe (0.0.2)
+      fastimage (~> 1.8.1)
+      rubyzip (~> 1.1, >= 1.1.7)
 
 GEM
   remote: http://rubygems.org/
   specs:
+    addressable (2.4.0)
+    fastimage (1.8.1)
+      addressable (~> 2.3, >= 2.3.5)
     rubyzip (1.1.7)
 
 PLATFORMS

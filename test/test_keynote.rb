@@ -27,6 +27,14 @@ class TestKeynote < Test::Unit::TestCase
     assert_not_nil @keynote.data
   end
 
+  def test_aspect_ratio
+    assert_equal :widescreen, @keynote.aspect_ratio
+  end
+
+  def test_widescreen
+    assert @keynote.widescreen?
+  end
+
   def test_preview_data
     assert_equal 32858, @keynote.preview_data.size
   end
