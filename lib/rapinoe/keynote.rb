@@ -3,6 +3,9 @@ module Rapinoe
     # The path where we can find the .key file.
     attr_accessor :path
 
+    # The name of the file.
+    attr_accessor :name
+
     # The (first stage) of uncompressed Keynote data in memory.
     attr_accessor :data
 
@@ -13,6 +16,7 @@ module Rapinoe
     # Returns a Keynote.
     def initialize(path)
       @path = path
+      @name = File.basename(path, ".key")
       extract_key_file
     end
 
@@ -49,7 +53,7 @@ module Rapinoe
     end
 
     def inspect
-      "<Rapinoe::Keynote: @path=#{@path}, @data=[…]>"
+      "<Rapinoe::Keynote: @name=\"#{@name}\", @path=\"#{@path}\", @data=[…]>"
     end
 
   private

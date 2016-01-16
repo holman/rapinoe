@@ -11,6 +11,10 @@ class TestKeynote < Test::Unit::TestCase
     assert_equal 'test/fixtures/ice cream.key', @keynote.path
   end
 
+  def test_name
+    assert_equal "ice cream", @keynote.name
+  end
+
   def test_size
     assert_equal 327378, @keynote.size
   end
