@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'rapinoe'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.licenses    = ['MIT']
   s.summary     = "Parse Keynote files in Ruby."
   s.description = "Rapinoe is designed to parse the native files for Apple's Keynote presentation software. Its main focus is to help extract previews and general metadata about the presentation."
