@@ -1,6 +1,9 @@
 module Rapinoe
   class Keynote
+    # The path where we can find the .key file.
     attr_accessor :path
+
+    # The (first stage) of uncompressed Keynote data in memory.
     attr_accessor :data
 
     # Create a new Keynote instance.
