@@ -23,4 +23,16 @@ class TestSlide < Test::Unit::TestCase
   ensure
     File.delete tempfile
   end
+
+  def test_write_preview_to_new_dir_and_file
+    tempfile = "/tmp/rapinoe/rapinoe-slide-preview.jpg"
+
+    refute File.exist?(tempfile)
+    @slide.write_preview_to_file(tempfile)
+
+    assert File.exist?(tempfile)
+    assert_operator File.size(tempfile), :>, 1484
+  ensure
+    FileUtils.rm_rf "/tmp/rapinoe"
+  end
 end

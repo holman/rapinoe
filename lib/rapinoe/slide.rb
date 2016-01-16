@@ -33,6 +33,7 @@ module Rapinoe
 
     # Writes the preview for this slide to disk.
     def write_preview_to_file(path)
+      FileUtils.mkdir_p(File.dirname(path))
       File.open(path, 'wb') do |out|
         out.write(preview_data)
       end

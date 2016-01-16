@@ -42,4 +42,16 @@ class TestKeynote < Test::Unit::TestCase
   ensure
     File.delete tempfile
   end
+
+  def test_write_preview_to_new_dir_and_file
+    tempfile = "/tmp/rapinoe/rapinoe-test.jpg"
+
+    refute File.exist?(tempfile)
+    @keynote.write_preview_to_file(tempfile)
+
+    assert File.exist?(tempfile)
+    assert_operator File.size(tempfile), :>, 32858
+  ensure
+    FileUtils.rm_rf "/tmp/rapinoe"
+  end
 end
