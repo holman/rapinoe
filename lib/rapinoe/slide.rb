@@ -37,5 +37,9 @@ module Rapinoe
         out.write(preview_data)
       end
     end
+
+    def inspect
+      "<Rapinoe::Slide>"
+    end
   end
 end

@@ -48,6 +48,10 @@ module Rapinoe
       end
     end
 
+    def inspect
+      "<Rapinoe::Keynote: @path=#{@path}, @data=[…]>"
+    end
+
   private
 
     # .key files basically just try to masquerade as .zip files. Once we extract
