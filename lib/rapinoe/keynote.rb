@@ -21,6 +21,12 @@ module Rapinoe
       File.size(path)
     end
 
+    def slides
+      @data.glob("Data/st-*").map do |preview_jpg_data|
+        Slide.new(preview_jpg_data.get_input_stream.read)
+      end
+    end
+
     # The binary data associated with the .jpg Keynote writes to make a
     # high(ish) quality preview version of the deck. You likely will want to
     # access this via #write_preview_to_file, unless you have specific needs for

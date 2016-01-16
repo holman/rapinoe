@@ -15,6 +15,10 @@ class TestKeynote < Test::Unit::TestCase
     assert_equal 327378, @keynote.size
   end
 
+  def test_slides
+    assert_kind_of Rapinoe::Slide, @keynote.slides.first
+  end
+
   def test_data
     assert_not_nil @keynote.data
   end
