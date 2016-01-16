@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
     lib/rapinoe/keynote.rb
     lib/rapinoe/slide.rb
     rapinoe.gemspec
-    test/fixtures/ice cream.key
+    test/fixtures/ice-cream.key
     test/test_keynote.rb
     test/test_rapinoe.rb
     test/test_slide.rb

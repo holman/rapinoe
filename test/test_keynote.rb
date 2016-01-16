@@ -4,15 +4,15 @@ include Rapinoe
 
 class TestKeynote < Test::Unit::TestCase
   def setup
-    @keynote = Keynote.new('test/fixtures/ice cream.key')
+    @keynote = Keynote.new('test/fixtures/ice-cream.key')
   end
 
   def test_path
-    assert_equal 'test/fixtures/ice cream.key', @keynote.path
+    assert_equal 'test/fixtures/ice-cream.key', @keynote.path
   end
 
   def test_name
-    assert_equal "ice cream", @keynote.name
+    assert_equal "ice-cream", @keynote.name
   end
 
   def test_size

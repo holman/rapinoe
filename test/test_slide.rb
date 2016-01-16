@@ -4,7 +4,7 @@ include Rapinoe
 
 class TestSlide < Test::Unit::TestCase
   def setup
-    @keynote = Keynote.new('test/fixtures/ice cream.key')
+    @keynote = Keynote.new('test/fixtures/ice-cream.key')
     @slide   = @keynote.slides.first
   end
 
