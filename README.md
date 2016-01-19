@@ -8,6 +8,14 @@ Primarily it's designed to help you access the simple metadata of a Keynote file
 
 ## Install
 
+First you'll need ImageMagick. If you use Homebrew, you'll be fine with a quick:
+
+```sh
+brew install imagemagick
+```
+
+Then install the gem:
+
 ```sh
 gem install rapinoe
 ```
