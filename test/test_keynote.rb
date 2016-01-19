@@ -35,6 +35,12 @@ class TestKeynote < Test::Unit::TestCase
     assert @keynote.widescreen?
   end
 
+  def test_colors
+    assert_kind_of Hash,  @keynote.colors
+    assert_equal   [108, 190, 212],    @keynote.colors.first[0]
+    assert_equal   0.9550793650793651, @keynote.colors.first[1]
+  end
+
   def test_preview_data
     assert_equal 32858, @keynote.preview_data.size
   end

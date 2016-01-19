@@ -29,4 +29,10 @@ rapinoe.slides.first.write_preview_to_file("/tmp/slide-preview.jpg")
 
 rapinoe.widescreen?
 # => true
+
+rapinoe.colors
+# Returns the dominant colors in the first title slide by percentage order. Keys
+# are in RGB format.
+#
+# => {[108, 190, 212]=>0.9550793650793651, [117, 124, 143]=>0.012619047619047618, [125, 83, 100]=>0.010158730158730159, [143, 23, 33]=>0.009603174603174603, [151, 10, 16]=>0.007301587301587302, [133, 49, 62]=>0.005238095238095238}
 ```

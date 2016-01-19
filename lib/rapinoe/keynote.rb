@@ -47,6 +47,33 @@ module Rapinoe
       aspect_ratio == :widescreen
     end
 
+    # The top colors present in the title slide.
+    #
+    # This returns a Hash of the color (in RGB) and its percentage in the frame.
+    # For example:
+    #
+    #   {
+    #     [1, 1, 1]   => 0.7296031746031746,
+    #     [8, 12, 15] => 0.13706349206349205,
+    #     [ … ]
+    #   }
+    def colors
+      return @colors if @colors
+
+      path = "/tmp/rapinoe-aspect"
+      write_preview_to_file(path)
+
+      colors = Miro::DominantColors.new(path)
+      by_percentage = colors.by_percentage
+      hash   = {}
+
+      colors.to_rgb.each_with_index do |hex, i|
+        hash[hex] = by_percentage[i]
+      end
+
+      @colors = hash
+    end
+
     def slides
       @data.glob("Data/st*").map do |preview_jpg_data|
         Slide.new(preview_jpg_data.get_input_stream.read)

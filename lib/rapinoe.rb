@@ -1,4 +1,5 @@
 require 'fastimage'
+require 'miro'
 require 'zip'
 
 require_relative 'rapinoe/keynote'
